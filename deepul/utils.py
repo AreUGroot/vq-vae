@@ -70,6 +70,7 @@ def save_distribution_2d(true_dist, learned_dist, fname):
 def show_samples(samples, fname=None, nrow=10, title='Samples'):
     samples = (torch.FloatTensor(samples) / 255).permute(0, 3, 1, 2)
     grid_img = make_grid(samples, nrow=nrow)
+    # show the image
     plt.figure()
     plt.title(title)
     plt.imshow(grid_img.permute(1, 2, 0))
@@ -81,7 +82,7 @@ def show_samples(samples, fname=None, nrow=10, title='Samples'):
         plt.show()
 
 
-def load_pickled_data(fname, include_labels=False):
+def load_pickled_data(fname, include_labels=False):  # Load the dataset
     with open(fname, 'rb') as f:
         data = pickle.load(f)
 
