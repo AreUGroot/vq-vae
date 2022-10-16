@@ -29,7 +29,7 @@ def save_training_plot(train_losses, test_losses, title, fname):
     plt.title(title)
     plt.xlabel('Epoch')
     plt.ylabel('NLL')
-    savefig(fname)
+    plt.savefig(fname, dpi=300)
 
 
 def save_scatter_2d(data, title, fname):
