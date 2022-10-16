@@ -77,7 +77,7 @@ def show_samples(samples, fname=None, nrow=10, title='Samples'):
     plt.axis('off')
 
     if fname is not None:
-        savefig(fname)
+        plt.savefig(fname, dpi=300)
     else:
         plt.show()
 
